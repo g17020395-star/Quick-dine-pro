@@ -159,7 +159,7 @@ window.open(`https://wa.me/${phone}?text=${whatsappMsg}`, '_blank');
                   </div>
                 </div>
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: '16px 0' }}>
-                  Pay to: <strong>quickdine@upi</strong>
+                  Pay to: <strong>g17020395-1@okicici</strong>
                 </p>
                 <button
                   className={`btn ${paymentConfirmed ? 'btn-accent' : 'btn-outline'} btn-lg`}
