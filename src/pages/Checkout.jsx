@@ -70,17 +70,19 @@ export default function Checkout() {
       addToast('Order placed successfully!')
 
       // WhatsApp deep link
-      const whatsappMsg = encodeURIComponent(
-        `✅ QuickDine Pro Order Confirmed!\n\n` +
-        `Order ID: ${orderId}\n` +
-        `Restaurant: ${cart.restaurantName}\n` +
-        `Time: ${timeSlot}\n` +
-        `Guests: ${guests}\n` +
-        `Total: ₹${grandTotal}\n\n` +
-        `Your food will be ready when you arrive! 🍽️`
-      )
-      window.open(`https://wa.me/8608178951${profile?.phone || ''}?text=${whatsappMsg}`, '_blank')
+      const phone = "918608178951"; // 91 + un number
 
+const whatsappMsg = encodeURIComponent(
+  `✅ QuickDine Pro Order Confirmed!\n\n` +
+  `Order ID: ${orderId}\n` +
+  `Restaurant: ${cart.restaurantName}\n` +
+  `Time: ${timeSlot}\n` +
+  `Guests: ${guests}\n` +
+  `Total: ₹${grandTotal}\n\n` +
+  `Your food will be ready when you arrive! 🍽️`
+);
+
+window.open(`https://wa.me/${phone}?text=${whatsappMsg}`, '_blank');
       navigate(`/invoice/${orderId}`)
     }, 1500)
   }
