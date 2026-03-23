@@ -79,7 +79,7 @@ export default function Checkout() {
         `Total: ₹${grandTotal}\n\n` +
         `Your food will be ready when you arrive! 🍽️`
       )
-      window.open(`https://wa.me/${profile?.phone || ''}?text=${whatsappMsg}`, '_blank')
+      window.open(`https://wa.me/8608178951${profile?.phone || ''}?text=${whatsappMsg}`, '_blank')
 
       navigate(`/invoice/${orderId}`)
     }, 1500)
