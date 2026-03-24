@@ -42,7 +42,7 @@ export default function Signup() {
       <div className="auth-visual">
         <div className="auth-visual-content">
           <span className="auth-illustration">🎉</span>
-          <h2>Join QuickDine Pro</h2>
+          <h2>Join Hot meals</h2>
           <p>Create an account and start pre-ordering food at your favorite restaurants</p>
         </div>
       </div>
