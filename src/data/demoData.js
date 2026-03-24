@@ -1,4 +1,4 @@
-// Demo data for QuickDine Pro — used when no Supabase connection is configured
+// Demo data for Hot meals — used when no Supabase connection is configured
 
 export const DEMO_RESTAURANTS = [
   {
@@ -227,6 +227,6 @@ export const DEMO_USERS = {
   customer: {
     email: 'customer@example.com',
     password: 'customer123',
-    profile: { id: 'c1', full_name: 'Rahul Sharma', phone: '9876543210', role: 'customer', restaurant_id: null }
+    profile: { id: 'c1', full_name: 'Rahul Sharma', phone: '10 digits...', role: 'customer', restaurant_id: null }
   }
 }
