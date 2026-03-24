@@ -158,6 +158,8 @@ window.open(`https://wa.me/${phone}?text=${whatsappMsg}`, '_blank');
                     </p>
                   </div>
                 </div>
+                <img src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=upi://pay?pa=gopi@upi&pn=HotMeals&am=${grandTotal}&cu=INR`} />
+                upi://pay?pa=g17020395-1@okicici&pn=HotMeals&am=AMOUNT&cu=INR
                 <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: '16px 0' }}>
                   Pay to: <strong>g17020395-1@okicici</strong>
                 </p>
