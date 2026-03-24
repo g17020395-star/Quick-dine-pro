@@ -7,7 +7,7 @@ export default function Invoice() {
   const invoiceRef = useRef()
 
   // Load order from localStorage
-  const orderData = localStorage.getItem(`quickdine_order_${orderId}`)
+  const orderData = localStorage.getItem(`Hot meals_order_${orderId}`)
   const order = orderData ? JSON.parse(orderData) : null
 
   const handleDownloadPDF = async () => {
@@ -17,7 +17,7 @@ export default function Invoice() {
       html2pdf()
         .set({
           margin: 0.5,
-          filename: `QuickDine_Invoice_${orderId}.pdf`,
+          filename: `Hot meals_Invoice_${orderId}.pdf`,
           image: { type: 'jpeg', quality: 0.98 },
           html2canvas: { scale: 2 },
           jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
@@ -31,7 +31,7 @@ export default function Invoice() {
 
   const handleShare = () => {
     const msg = encodeURIComponent(
-      `🧾 QuickDine Pro Invoice\n\n` +
+      `🧾 Hot meals Invoice\n\n` +
       `Order ID: ${order?.id}\n` +
       `Restaurant: ${order?.restaurant_name}\n` +
       `Total: ₹${order?.total_amount}\n` +
@@ -87,7 +87,7 @@ export default function Invoice() {
         <div className="invoice-container" ref={invoiceRef}>
           <div className="invoice-header">
             <div className="invoice-brand">
-              <h1>🍽️ QuickDine Pro</h1>
+              <h1>🍽️ Hot meals</h1>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>Tax Invoice</p>
             </div>
             <div className="invoice-meta">
@@ -152,7 +152,7 @@ export default function Invoice() {
           </div>
 
           <div className="invoice-footer">
-            <p>Thank you for dining with QuickDine Pro!</p>
+            <p>Thank you for dining with Hot meals!</p>
             <p>Payment Status: <strong style={{ color: '#059669' }}>✓ Paid</strong></p>
           </div>
         </div>
