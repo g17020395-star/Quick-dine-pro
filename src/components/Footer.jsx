@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="footer-brand">
             <h3>
               <UtensilsCrossed size={20} style={{ marginRight: 8, verticalAlign: 'middle' }} />
-              QuickDine Pro
+              Hot meals
             </h3>
             <p>
               Book before you reach. Pre-order food, book tables, and enjoy a seamless dining experience at your favorite restaurants.
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          &copy; {new Date().getFullYear()} QuickDine Pro. All rights reserved.
+          &copy; {new Date().getFullYear()} Hot meals. All rights reserved.
         </div>
       </div>
     </footer>
