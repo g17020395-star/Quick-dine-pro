@@ -37,7 +37,7 @@ export default function Navbar() {
             <div className="logo-icon">
               <UtensilsCrossed size={22} />
             </div>
-            QuickDine Pro
+           Hot meals
           </Link>
 
           <div className="navbar-links">
