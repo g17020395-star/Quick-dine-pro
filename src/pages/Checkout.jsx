@@ -72,15 +72,20 @@ export default function Checkout() {
       // WhatsApp deep link
       const phone = "918608178951"; // 91 + un number
 
+const itemsList = cart.items.map(item => 
+  `🍽 ${item.name} x ${item.quantity} - ₹${item.price * item.quantity}`
+).join('\n')
+
 const whatsappMsg = encodeURIComponent(
-  `✅ QuickDine Pro Order Confirmed!\n\n` +
-  `Order ID: ${orderId}\n` +
-  `Restaurant: ${cart.restaurantName}\n` +
-  `Time: ${timeSlot}\n` +
-  `Guests: ${guests}\n` +
-  `Total: ₹${grandTotal}\n\n` +
-  `Your food will be ready when you arrive! 🍽️`
-);
+  `🔥 Hot Meals Order Confirmed!\n\n` +
+  `🆔 Order ID: ${orderId}\n` +
+  `🏨 Restaurant: ${cart.restaurantName}\n\n` +
+  `📋 Items:\n${itemsList}\n\n` +
+  `👥 Guests: ${guests}\n` +
+  `⏰ Time: ${timeSlot}\n` +
+  `💰 Total: ₹${grandTotal}\n\n` +
+  `✅ Your food will be ready when you arrive! 🍽`
+)
 
 window.open(`https://wa.me/${phone}?text=${whatsappMsg}`, '_blank');
       navigate(`/invoice/${orderId}`)
