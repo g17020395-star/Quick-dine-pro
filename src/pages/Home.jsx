@@ -147,7 +147,7 @@ export default function Home() {
           <div className="section-header">
             <div className="overline">
               <Sparkles size={16} />
-              Why QuickDine Pro
+              Why Hot meals
             </div>
             <h2>A Better Way to Dine</h2>
             <p>Modern features designed for the perfect dining experience</p>
