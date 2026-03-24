@@ -10,14 +10,14 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     // Check for saved session
-    const saved = localStorage.getItem('quickdine_session')
+    const saved = localStorage.getItem('Hot meals_session')
     if (saved) {
       try {
         const session = JSON.parse(saved)
         setUser(session.user)
         setProfile(session.profile)
       } catch (e) {
-        localStorage.removeItem('quickdine_session')
+        localStorage.removeItem('Hot meals_session')
       }
     }
     setLoading(false)
@@ -33,7 +33,7 @@ export function AuthProvider({ children }) {
         }
         setUser(session.user)
         setProfile(session.profile)
-        localStorage.setItem('quickdine_session', JSON.stringify(session))
+        localStorage.setItem('Hot meals_session', JSON.stringify(session))
         return { success: true, role: userData.profile.role }
       }
     }
@@ -55,7 +55,7 @@ export function AuthProvider({ children }) {
     }
     setUser(session.user)
     setProfile(session.profile)
-    localStorage.setItem('quickdine_session', JSON.stringify(session))
+    localStorage.setItem('Hot meals_session', JSON.stringify(session))
     return { success: true }
   }
 
