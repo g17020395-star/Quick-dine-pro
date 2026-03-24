@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer, useEffect } from 'react'
 
 const CartContext = createContext(null)
 
-const CART_KEY = 'quickdine_cart'
+const CART_KEY = 'Hot meals_cart'
 
 function cartReducer(state, action) {
   switch (action.type) {
